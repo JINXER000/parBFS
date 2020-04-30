@@ -1,0 +1,7 @@
+*.zip
+*.rar
+build
+devel
+*.workspace
+*.user
+OOQP-env/
