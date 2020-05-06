@@ -192,10 +192,6 @@ void parWavefront(std::vector<int> &srcNode,
 	     CUDA_MEMCPY_D2H(&h_is_end,d_is_end,sizeof(bool));
 	     if(h_is_end)
 	     {
-	    	 // copy dist d 2 h
-	    	 CUDA_MEMCPY_D2H(&distances[0],d_cost, sizeof(int)*cuGraph.numVertices);
-	    	 int rnd=rounds[0];
-	    	 printf("final distance is %d , levels  is %d \n",distances[destination],rnd);
 	    	break;
 	     }
 	   } while(1);
@@ -205,7 +201,10 @@ void parWavefront(std::vector<int> &srcNode,
 	   printf("GPU kernel done\n");
 
 	   // copy result from device to host
-//	   cudaMemcpy(&distances[0], d_cost, sizeof(int)*cuGraph.numVertices, cudaMemcpyDeviceToHost);
+  	 // copy dist d 2 h
+  	 CUDA_MEMCPY_D2H(&distances[0],d_cost, sizeof(int)*cuGraph.numVertices);
+  	 int rnd=rounds[0];
+  	 printf("final distance is %d , levels  is %d \n",distances[destination],rnd);
 		// retrace
 		std::vector<int> search_path;
 		int ptOnPath=destination;

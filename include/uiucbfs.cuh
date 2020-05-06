@@ -132,11 +132,11 @@ visit_node(int pid,
   int cur_cost = g_cost[pid];	// Look up shortest-path distance to this node
   Node cur_node = tex1Dfetch(g_graph_node_ref,pid);
   // if terminal node is the end
-  if(pid==endId)
-  {
-  	*is_end=true;
-  	return;
-  }
+//  if(pid==endId)
+//  {
+//  	*is_end=true;
+//  	return;
+//  }
   // For each outgoing edge
   for(int i = cur_node.x; i < cur_node.y + cur_node.x; i++) {
     Edge cur_edge = tex1Dfetch(g_graph_edge_ref,i);

@@ -15,7 +15,7 @@ using namespace std::chrono;
 
 
 
-#define USE_GPU
+//#define USE_GPU
 
 
 int main(){
