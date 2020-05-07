@@ -15,7 +15,7 @@ using namespace std::chrono;
 
 
 
-//#define USE_GPU
+#define USE_GPU
 
 
 int main(){
@@ -29,7 +29,7 @@ int main(){
 	int numVertices,numEdges;
 		int total_rounds=0;
 
-	inputFileName = "input/NetworkScienceMinified.txt";
+	inputFileName = "input/NetworkScienceGiantComponent.txt";
 	openFileToAccess< std::ifstream >( inputFile, inputFileName );
 	if( !inputFile.is_open()) {
 		std::cerr << "input file not found " << std::endl;
