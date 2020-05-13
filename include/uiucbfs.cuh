@@ -201,7 +201,7 @@ visit_node(int pid,
 	int cur_cost = g_cost[pid];	// Look up shortest-path distance to this node
 //	Node cur_node = tex1Dfetch(g_graph_node_ref,pid);
 	Node cur_node = g_graph_nodes[pid];
-//	Node cur_node = ugraph.graph_nodeD[pid];
+
 	// if terminal node is the end
 	//  if(pid==endId)
 	//  {
